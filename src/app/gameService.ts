@@ -1,4 +1,19 @@
+import {Injectable} from '@angular/core'
+import {Http, Response} from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+ 
+@Injectable()
     export class GameService {
+      constructor(
+        private http: Http){
+      }
+      url = "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&excludePartOfSpeech=proper-noun&minCorpusCount=15700&maxCorpusCount=-1&minDictionaryCount=3&maxDictionaryCount=4&minLength=3&maxLength=10&limit=25&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";      
+      getData(): Promise<Response> {
+      //  this.logService.log("Getting products");
+      
+        return this.http.get
+          (this.url).toPromise();
+      }
         getWordsArray() {
             var fake: string[] = ["cat", "dog", "apple"]; 
             return fake;

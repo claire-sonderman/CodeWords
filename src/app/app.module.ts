@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TitleBarComponent } from './titleBar.component';
@@ -13,7 +14,7 @@ import { GameService } from './gameService'
     AppComponent, TitleBarComponent, SideBarComponent, BoardComponent, CardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpModule
   ],
   providers: [GameService],
   bootstrap: [AppComponent]
