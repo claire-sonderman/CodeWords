@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {GameService} from './gameService'
+import {CardDetails} from './CardDetails'
 
 @Component({
   selector: 'app-root',
@@ -8,18 +9,6 @@ import {GameService} from './gameService'
 })
 export class AppComponent {
   title = 'Code Words';
-  words: Array<string>;
-  error: any
-  constructor(private service: GameService){
-  }
-  name: string;
-  ngOnInit(){
-  this.service.getData().then(
-        response => {
-          this.words = response.json();
-        },
-        error => this.error);
 
-  }
   
 }
