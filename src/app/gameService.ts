@@ -1,15 +1,29 @@
-    export class GameService {
-        getWordsArray() {
-            var fake: string[] = ["cat", "dog", "apple"]; 
-            return fake;
-        }
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+export class GameService {
+  // getWordsArray() {
+  //     var fake: string[] = ["cat", "dog", "apple"]; 
+  //     return fake;
+  // }
 
-        getColorsArray() {
-            var fake: string[] = ["r", "b", "n"]; 
-            return fake;
-        }
+  // getColorsArray() {
+  //     var fake: string[] = ["r", "b", "n"]; 
+  //     return fake;
+  // }
 
+    constructor(ng 
+      private http: Http) {
     }
+    url = "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&excludePartOfSpeech=proper-noun&minCorpusCount=15700&maxCorpusCount=-1&minDictionaryCount=3&maxDictionaryCount=4&minLength=3&maxLength=10&limit=25&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
+    getWords(): Promise<Response> {
+      //this.logService.log("Getting products");
+      
+    console.log("RETURN: ", this.http.get);
+      return this.http.get
+        (this.url).toPromise();
+    }
+
+}
 
 
 
