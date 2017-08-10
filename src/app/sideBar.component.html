@@ -1,0 +1,33 @@
+    <div class="sideBar">
+        <button class="btn" data-toggle="modal" data-target="#myModal">Instructions</button>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Instructions</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong><span style="instruction">Overview:</span></strong></p>
+                        <p><span style="instructions">This game involves word deduction. Players form 2 teams (red and blue) with one Leader on each team. Each Team Leader has 9 (red) or 8 (blue) code words in the display that their teammates need to guess. Team Leaders can give their teammates one word clues.</span></p>
+                        <p>&nbsp;</p>
+                        <p><strong><span style="instructions">Turns:</span></strong></p>
+                        <p><span style="instructions">The Team Leader gives a one word clue and a number. The number is how many code words in the display that the word describes or is related to. Teammates can guess that many words on the board. The turn is over if a Neutral card or the opponent&rsquo;s words are guessed. If the Death word is guessed, then that team loses the game.</span></p>
+                        <p>&nbsp;</p>
+                        <p><strong><span style="instructions">Win:</span></strong></p>
+                        <p><span style="instructions">The game ends when one team's code words are all guessed (flipped). That team wins.</span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn">Start Turn</button>
+        <div class="scores">Team Red</div>
+        <div class="redTeam">0/9</div>
+        <div class="scores">Team Blue</div>
+        <div class="blueTeam">0/8</div>
+        <button class="btn">Reset Game</button>
+    </div>
