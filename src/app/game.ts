@@ -28,7 +28,7 @@ export class Game {
       new Cell(this, wordArray[24], shuffledTypeOfCards[24])*/
     ]
   }
-  turn: boolean;
+  turn: string = "Red Start Turn";
   cells: Array<Cell>
 }
 export class Cell {
@@ -60,7 +60,6 @@ export class Cell {
   isFlipped: boolean = false;
 
   select() {
-    this.game.turn = !this.game.turn;
     this.isFlipped = true;
 
   }

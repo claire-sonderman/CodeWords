@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Game} from './game';
-import {GameService} from './gameService';
+
+
 
 @Component({
     selector: 'board',
@@ -8,14 +9,6 @@ import {GameService} from './gameService';
 })
 
 export class BoardComponent {
-    wordsArray: string[];
-    colorsArray: string[];
-    game: Game;
-
-    constructor(private service: GameService) {
-        this.wordsArray = this.service.getWordsArray();
-        this.colorsArray = this.service.getColorsArray();
-        this.game = new Game(this.wordsArray, this.colorsArray);
-    }
+    @Input() game: Game
     
 }
