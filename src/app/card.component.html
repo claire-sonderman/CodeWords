@@ -1,4 +1,4 @@
 <div class="frontCard" (click)="onClick()">
-    <div *ngIf="cell.isX">X</div>
-    <div *ngIf="cell.isX === false">O</div>
+    <div *ngIf="cell.isFlipped" class="backCardRed"></div>
+    <div *ngIf="cell.isFlipped === false"></div>
 </div>

@@ -35,11 +35,11 @@ export class Cell{
   constructor(private game: Game){
 
   }
-  isX: boolean| undefined;
+  isFlipped: boolean| undefined;
   select() {
-    if (this.isX !== undefined)
+    if (this.isFlipped !== undefined)
       return;
     this.game.turn = !this.game.turn;
-    this.isX = this.game.turn;
+    this.isFlipped = true;
   }
 }

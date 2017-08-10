@@ -1,1 +1,6 @@
-<div id="board" class=".boardStyle">"I am the board"</div>
+<div id="board" class=".boardStyle">
+    <div *ngFor="let item of game.cells">
+        <card [cell]="item"></card>
+    </div>
+
+</div>
