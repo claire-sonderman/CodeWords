@@ -1,4 +1,4 @@
 <div class="frontCard" (click)="onClick()">
-    <div *ngIf="cell.isFlipped" class="backCardRed"></div>
-    <div *ngIf="cell.isFlipped === false"></div>
+    <div *ngIf="cell.isFlipped" [class.backCardRed]="cell.isRed" [class.backCardBlue]="cell.isBlue" [class.backCardNeutral]="cell.isNeutral" [class.backCardLose]="cell.isLose"></div>
+    <div *ngIf="cell.isFlipped === false">{{cell.word}}</div>
 </div>

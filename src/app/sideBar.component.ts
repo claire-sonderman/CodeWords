@@ -5,8 +5,13 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'sideBar.component.html'
 })
 
-export class SideBarComponent implements OnInit {
-    constructor() { }
+export class SideBarComponent {
 
-    ngOnInit() { }
+    startTurnClicked(event) {
+        console.log("clicked turn button");
+    }
+
+    resetClicked(event) {
+        console.log("reset clicked");
+    }
 }

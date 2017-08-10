@@ -6,6 +6,7 @@ import { TitleBarComponent } from './titleBar.component';
 import { SideBarComponent } from './sideBar.component';
 import { BoardComponent } from './board.component';
 import { CardComponent } from './card.component';
+import { GameService } from './gameService'
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CardComponent } from './card.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
