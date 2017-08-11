@@ -1,10 +1,12 @@
+import {CardDetails} from './CardDetails';
+
 export class Game {
   constructor(private wordArray: Array<string>, private shuffledTypeOfCards: Array<string>) {
     this.cells = [
       new Cell(this, wordArray[0], shuffledTypeOfCards[0]),
       new Cell(this, wordArray[1], shuffledTypeOfCards[1]),
       new Cell(this, wordArray[2], shuffledTypeOfCards[2]),
-      /*new Cell(this, wordArray[3], shuffledTypeOfCards[3]),
+      new Cell(this, wordArray[3], shuffledTypeOfCards[3]),
       new Cell(this, wordArray[4], shuffledTypeOfCards[4]),
       new Cell(this, wordArray[5], shuffledTypeOfCards[5]),
       new Cell(this, wordArray[6], shuffledTypeOfCards[6]),
@@ -25,7 +27,7 @@ export class Game {
       new Cell(this, wordArray[21], shuffledTypeOfCards[21]),
       new Cell(this, wordArray[22], shuffledTypeOfCards[22]),
       new Cell(this, wordArray[23], shuffledTypeOfCards[23]),
-      new Cell(this, wordArray[24], shuffledTypeOfCards[24])*/
+      new Cell(this, wordArray[24], shuffledTypeOfCards[24])
     ]
   }
   turn: boolean;

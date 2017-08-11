@@ -28,7 +28,7 @@
 }
 
 .backCardBlue{
-    background: red;
+    background: blue;
     border: 1px dotted purple;
     color: white;
     width: 15%;
@@ -42,7 +42,7 @@
 }
 
 .backCardNeutral{
-    background: yellow;
+    background: tan;
     border: 1px dotted purple;
     color: white;
     width: 15%;
@@ -56,7 +56,7 @@
 }
 
 .backCardLose{
-    background: black;
+    background: red;
     border: 1px dotted purple;
     color: white;
     width: 15%;
