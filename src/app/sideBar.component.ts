@@ -9,6 +9,7 @@ import { Game } from './game';
 export class SideBarComponent {
 
     @Input() game: Game;
+    keyVisible: boolean = false;
 
     startTurnClicked(event) {
         console.log("clicked turn button");
@@ -32,5 +33,10 @@ export class SideBarComponent {
     resetClicked(event) {
         console.log("reset clicked");
         location.reload();
+    }
+
+    showKey(event) {
+        this.keyVisible = !this.keyVisible;
+        console.log("show key or hide key");
     }
 }

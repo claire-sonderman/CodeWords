@@ -31,7 +31,8 @@ export class Game {
     ]
   }
   turn: string = "Red Start Turn";
-  cells: Array<Cell>
+  cells: Array<Cell>;
+  key: Array<string> = [];
 }
 export class Cell {
   constructor(private game: Game, private wrd: string, private clr: string) {

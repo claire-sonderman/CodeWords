@@ -35,7 +35,21 @@ export class AppComponent {
                 this.wordsArray = this.wordsArray;
                 this.colorsArray = this.service.getColorsArray();
                 this.game = new Game(this.wordsArray, this.colorsArray);
+                var tempArray = this.colorsArray
+
+                var one = tempArray.slice(0,5).join(' ');
+                var two = tempArray.slice(5,10).join(' ');
+                var three = tempArray.slice(10,15).join(' ');
+                var four = tempArray.slice(15,20).join(' ');
+                var five = tempArray.slice(20,25).join(' ');
+               
+                this.game.key.push(one);
+                this.game.key.push(two);
+                this.game.key.push(three);
+                this.game.key.push(four);
+                this.game.key.push(five);
             },
+
             error => this.error);
 
     }
