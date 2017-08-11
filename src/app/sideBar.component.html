@@ -32,9 +32,11 @@
         <div class="redTeam">{{game.redPoints}}/9</div>
         <div class="scores">Team Blue</div>
         <div class="blueTeam">{{game.bluePoints}}/8</div>
+
+                <p>&nbsp;</p>
+        <p>&nbsp;</p>
         <button class="btn" (click)="startTurnClicked()" onclick="this.blur()">{{game.turn}}</button>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+
         <button class="btn" (click)="showKey()" onclick="this.blur()">Show/Hide Key</button>
         <div *ngIf = "keyVisible" class="scores">
                 <div *ngFor="let item of game.key">
