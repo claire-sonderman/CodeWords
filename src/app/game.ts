@@ -30,9 +30,13 @@ export class Game {
       new Cell(this, wordArray[24], shuffledTypeOfCards[24])
     ]
   }
+  redPoints: number = 0;
+  bluePoints: number = 0;
   turn: string = "Red Start Turn";
   cells: Array<Cell>;
   key: Array<string> = [];
+  lose: boolean = false;
+  win: boolean = false;
 }
 export class Cell {
   constructor(private game: Game, private wrd: string, private clr: string) {

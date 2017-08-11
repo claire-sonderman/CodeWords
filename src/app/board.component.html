@@ -1,6 +1,14 @@
 <div id="board" class=".boardStyle">
     <div *ngFor="let item of game.cells">
-        <card [cell]="item"></card>
+        <card [cell]="item" [game] = "game"></card>
     </div>
 
+</div>
+<div class="lose" *ngIf="game.lose">
+    <div> You lose!
+    </div>
+</div>
+<div class="lose" *ngIf="game.win">
+    <div *ngIf="game.redPoints === 9"> Red Team Wins!</div>
+    <div *ngIf="game.bluePoints === 8"> Blue Team Wins!</div>
 </div>
