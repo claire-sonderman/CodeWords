@@ -16,7 +16,7 @@ export class GameService {
       (this.url).toPromise();
   }
   getWordsArray() {
-    var fake: string[] = ["cat", "dog", "apple"];
+    var fake: string[] = [];
     return fake;
   }
 

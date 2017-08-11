@@ -9,11 +9,9 @@ import { CardDetails } from './CardDetails';
 })
 
 export class BoardComponent {
-    cardArray: Array<CardDetails>;
     wordsArray: string[];
     colorsArray: string[];
     game: Game;
-    // cards: Array<Card>;
     cards: string[];
     error: any
     constructor(private service: GameService) {

@@ -12,6 +12,7 @@ export class SideBarComponent {
     }
 
     resetClicked(event) {
+        location.reload();
         console.log("reset clicked");
     }
 }
