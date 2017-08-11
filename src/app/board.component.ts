@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Game } from './game';
 import { GameService } from './gameService';
 import { CardDetails } from './CardDetails';
@@ -9,35 +9,7 @@ import { CardDetails } from './CardDetails';
 })
 
 export class BoardComponent {
-    cardArray: Array<CardDetails>;
-    wordsArray: string[];
-    colorsArray: string[];
-    game: Game;
-    // cards: Array<Card>;
-    cards: string[];
-    error: any
-    constructor(private service: GameService) {
-            this.wordsArray = this.service.getWordsArray();
-            this.colorsArray = this.service.getColorsArray();
-            this.game = new Game(this.wordsArray, this.colorsArray);
-    }
-
-    ngOnInit() {
-        this.service.getData().then(
-            response => {
-                let data = response.json();
-                for (var i = 0; i < 25; i++) {
-                    this.wordsArray[i] = data[i].word;
-                }
-                this.wordsArray = this.wordsArray;
-                this.colorsArray = this.service.getColorsArray();
-                this.game = new Game(this.wordsArray, this.colorsArray);
-            },
-            error => this.error);
-
-    }
-
-
+    @Input() game: Game
 
     // constructor(private service: GameService) {
     //     this.wordsArray = this.service.getWordsArray();

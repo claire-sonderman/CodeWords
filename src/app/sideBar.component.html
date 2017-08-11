@@ -1,5 +1,5 @@
     <div class="sideBar">
-        <button class="btn" data-toggle="modal" data-target="#myModal">Instructions</button>
+        <button class="btn"  onclick="this.blur()" data-toggle="modal" data-target="#myModal">Instructions</button>
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <button class="btn" (click)="resetClicked()">Reset Game</button>
+        <button class="btn" (click)="resetClicked()" onclick="this.blur()">Reset Game</button>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <div class="scoreTitle">Scores:</div>
@@ -32,6 +32,6 @@
         <div class="redTeam">0/9</div>
         <div class="scores">Team Blue</div>
         <div class="blueTeam">0/8</div>
-        <button class="btn" (click)="startTurnClicked()">Start Turn</button>
+        <button class="btn" (click)="startTurnClicked()" onclick="this.blur()">{{game.turn}}</button>
         
     </div>
